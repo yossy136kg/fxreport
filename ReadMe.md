@@ -113,59 +113,6 @@ npm run dev
 
 ```properties
 gemini.api.key=xxxxxxxxxxxxxxxx
-```
-
-⚠ **注意**
-現在は `application.properties` に直接キーを記載しています。
-Git 管理対象とする場合、**公開リポジトリでは非常に危険**です。
-
-### 推奨（将来的対応）
-
-```properties
-gemini.api.key=${GEMINI_API_KEY}
-```
-
-```bash
-export GEMINI_API_KEY=xxxxxxxx
-```
-
----
-
-## 🔐 Git運用ルール（重要）
-
-### 管理対象
-
-* バックエンド／フロントエンドのソースコード
-* 設定ファイル（※秘密情報を除く）
-
-### 管理対象外（.gitignore）
-
-```
-.metadata/
-.project
-.classpath
-.settings/
-
-target/
-node_modules/
-dist/
-
-.env
-.env.*
-```
-
----
-
-## 🔄 開発時のGit運用イメージ
-
-| 作業                   | 推奨ツール            |
-| -------------------- | ---------------- |
-| バックエンド開発             | Eclipse          |
-| フロントエンド開発            | VS Code          |
-| 差分確認                 | SourceTree       |
-| commit / push / pull | SourceTree / CLI |
-
-※ Git操作は **リポジトリルート（fxreport）単位**で行う
 
 ---
 
