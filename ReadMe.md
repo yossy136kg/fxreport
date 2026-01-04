@@ -113,7 +113,7 @@ npm run dev
 
 ```properties
 gemini.api.key=xxxxxxxxxxxxxxxx
-
+```
 ---
 
 ## 🧭 本プロジェクトの位置づけ
