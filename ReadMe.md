@@ -197,3 +197,7 @@ AI生成
  ├─ fx_ai_comment
  └─ fx_ai_daily_report
 ```
+
+## 🗺 画面イメージ
+
+![画面イメージ](docs/images/fxreport.png)

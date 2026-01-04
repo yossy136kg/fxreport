@@ -7326,3 +7326,49 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2026/01/04 21:48:00 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
 2026/01/04 21:48:00 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
 2026/01/04 21:48:00 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:49:50 [ INFO] Starting FxReportApplication using Java 21.0.5 with PID 27352 (C:\Apps\workspace_fxreport\fxreport-backend\FxReport\target\classes started by mstyo in C:\Apps\workspace_fxreport\fxreport-backend\FxReport)
+2026/01/04 22:49:50 [ INFO] No active profile set, falling back to 1 default profile: "default"
+2026/01/04 22:49:51 [ INFO] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026/01/04 22:49:51 [ INFO] Finished Spring Data repository scanning in 57 ms. Found 5 JPA repository interfaces.
+2026/01/04 22:49:51 [ INFO] Tomcat initialized with port 8080 (http)
+2026/01/04 22:49:51 [ INFO] Starting service [Tomcat]
+2026/01/04 22:49:51 [ INFO] Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026/01/04 22:49:51 [ INFO] Initializing Spring embedded WebApplicationContext
+2026/01/04 22:49:51 [ INFO] Root WebApplicationContext: initialization completed in 1255 ms
+2026/01/04 22:49:51 [ INFO] HHH000204: Processing PersistenceUnitInfo [name: default]
+2026/01/04 22:49:52 [ INFO] HHH000412: Hibernate ORM core version 6.4.4.Final
+2026/01/04 22:49:52 [ INFO] HHH000026: Second-level cache disabled
+2026/01/04 22:49:52 [ INFO] No LoadTimeWeaver setup: ignoring JPA class transformer
+2026/01/04 22:49:52 [ INFO] HikariPool-1 - Starting...
+2026/01/04 22:49:52 [ INFO] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@20a9f5fb
+2026/01/04 22:49:52 [ INFO] HikariPool-1 - Start completed.
+2026/01/04 22:49:53 [ INFO] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026/01/04 22:49:53 [ INFO] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026/01/04 22:49:54 [ WARN] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026/01/04 22:49:54 [ INFO] Tomcat started on port 8080 (http) with context path ''
+2026/01/04 22:49:54 [ INFO] Started FxReportApplication in 4.564 seconds (process running for 5.529)
+2026/01/04 22:50:13 [ INFO] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026/01/04 22:50:13 [ INFO] Initializing Servlet 'dispatcherServlet'
+2026/01/04 22:50:13 [ INFO] Completed initialization in 1 ms
+2026/01/04 22:50:13 [DEBUG] select fadr1_0.id,fadr1_0.base_ccy,fadr1_0.created_at,fadr1_0.report_date,fadr1_0.report_text from fx_ai_daily_report fadr1_0 where fadr1_0.report_date=?
+2026/01/04 22:50:13 [DEBUG] select frm1_0.id,frm1_0.base_ccy,frm1_0.close_rate,frm1_0.created_at,frm1_0.diff_prev,frm1_0.ma7,frm1_0.pct_prev,frm1_0.quote_ccy,frm1_0.rate_date,frm1_0.trend_7d from fx_rate_metrics frm1_0 where frm1_0.rate_date=?
+2026/01/04 22:50:13 [DEBUG] select fadr1_0.id,fadr1_0.base_ccy,fadr1_0.created_at,fadr1_0.report_date,fadr1_0.report_text from fx_ai_daily_report fadr1_0 where fadr1_0.report_date=?
+2026/01/04 22:50:14 [DEBUG] select frm1_0.id,frm1_0.base_ccy,frm1_0.close_rate,frm1_0.created_at,frm1_0.diff_prev,frm1_0.ma7,frm1_0.pct_prev,frm1_0.quote_ccy,frm1_0.rate_date,frm1_0.trend_7d from fx_rate_metrics frm1_0 where frm1_0.rate_date=?
+2026/01/04 22:50:16 [DEBUG] select fadr1_0.id,fadr1_0.base_ccy,fadr1_0.created_at,fadr1_0.report_date,fadr1_0.report_text from fx_ai_daily_report fadr1_0 where fadr1_0.report_date=?
+2026/01/04 22:50:16 [DEBUG] select frm1_0.id,frm1_0.base_ccy,frm1_0.close_rate,frm1_0.created_at,frm1_0.diff_prev,frm1_0.ma7,frm1_0.pct_prev,frm1_0.quote_ccy,frm1_0.rate_date,frm1_0.trend_7d from fx_rate_metrics frm1_0 where frm1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fadr1_0.id,fadr1_0.base_ccy,fadr1_0.created_at,fadr1_0.report_date,fadr1_0.report_text from fx_ai_daily_report fadr1_0 where fadr1_0.report_date=?
+2026/01/04 22:50:20 [DEBUG] select frm1_0.id,frm1_0.base_ccy,frm1_0.close_rate,frm1_0.created_at,frm1_0.diff_prev,frm1_0.ma7,frm1_0.pct_prev,frm1_0.quote_ccy,frm1_0.rate_date,frm1_0.trend_7d from fx_rate_metrics frm1_0 where frm1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
+2026/01/04 22:50:20 [DEBUG] select fac1_0.id,fac1_0.base_ccy,fac1_0.created_at,fac1_0.quote_ccy,fac1_0.rate_date,fac1_0.summary from fx_ai_comment fac1_0 where fac1_0.base_ccy=? and fac1_0.quote_ccy=? and fac1_0.rate_date=?
+2026/01/04 22:50:20 [DEBUG] select fr1_0.id,fr1_0.base_ccy,fr1_0.created_at,fr1_0.quote_ccy,fr1_0.rate,fr1_0.rate_date from fx_rate fr1_0 where fr1_0.base_ccy=? and fr1_0.quote_ccy=? and fr1_0.rate_date between ? and ? order by fr1_0.rate_date
