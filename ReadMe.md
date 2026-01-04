@@ -22,7 +22,6 @@ fxreport（Gitリポジトリルート）
 * Spring Boot
 * Maven
 * REST API
-* application.properties による設定管理
 * Gemini API（AI連携）
 
 ### フロントエンド
@@ -35,8 +34,8 @@ fxreport（Gitリポジトリルート）
 
 ### 開発・運用
 
-* GitHub（monorepo構成）
-* Git（SourceTree / CLI / IDE連携）
+* GitHub
+* Git
 * IDE
 
   * Eclipse（バックエンド）
@@ -74,16 +73,6 @@ fxreport
 cd fxreport-backend/FxReport
 ./mvnw spring-boot:run
 ```
-
-* 起動ポート：**8080**
-* Java バージョン確認：
-
-```bash
-java -version
-```
-
-→ `21` であることを確認
-
 ---
 
 ### 2️⃣ フロントエンド（React + Vite）
@@ -122,14 +111,6 @@ gemini.api.key=xxxxxxxxxxxxxxxx
 * 為替データ × AI（Gemini） × 可視化
 * Spring Boot + React（Java 21）
 * 将来的なクラウド公開・API拡張を想定
-
----
-
-## 📝 重要メモ
-
-* Eclipse の workspace（`.metadata`）は **絶対にGit管理しない**
-* `git add .` は **必ずリポジトリ直下**で実行
-* APIキーは **履歴に残さない**
 
 ---
 
@@ -182,7 +163,7 @@ gemini.api.key=xxxxxxxxxxxxxxxx
 
 ---
 
-## 🔗 想定データフロー（READMEに書くと評価が上がる）
+## 🔗 想定データフロー
 
 ```
 外部API
