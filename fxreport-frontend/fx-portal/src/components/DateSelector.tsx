@@ -21,20 +21,20 @@ export default function DateSelector({
 
     return (
         <Form.Group controlId="dateSelect" className="mb-3">
-            <Form.Label>日付を選択</Form.Label>
-            <div style={{ maxWidth: '30%' }}>      <InputGroup>
-                <Button variant="outline-secondary" onClick={handlePrev}>
-                    ◀
-                </Button>
-                <Form.Control
-                    type="date"
-                    value={selectedDate}
-                    onChange={(e) => onChange(e.target.value)}
-                />
-                <Button variant="outline-secondary" onClick={handleNext}>
-                    ▶
-                </Button>
-            </InputGroup>
+            <div style={{ maxWidth: '30%' }}>
+                <InputGroup>
+                    <Button variant="outline-secondary" onClick={handlePrev}>
+                        ◀
+                    </Button>
+                    <Form.Control
+                        type="date"
+                        value={selectedDate}
+                        onChange={(e) => onChange(e.target.value)}
+                    />
+                    <Button variant="outline-secondary" onClick={handleNext}>
+                        ▶
+                    </Button>
+                </InputGroup>
             </div>
         </Form.Group >
     )

@@ -12,9 +12,12 @@ export default function Dashboard() {
     const [rates, setRates] = useState<RateData[]>([])
     const currencies = Array.from(new Set(rates.map(r => r.currency)))
     const [selectedCurrencies, setSelectedCurrencies] = useState<string[]>(currencies)
-    const yesterday = new Date();
-    yesterday.setDate(yesterday.getDate() - 1);
-    const formatted = yesterday.toISOString().slice(0, 10);
+    const d = new Date();
+    d.setDate(d.getDate() - 1);
+    const yyyy = d.getFullYear();
+    const mm = String(d.getMonth() + 1).padStart(2, '0');
+    const dd = String(d.getDate()).padStart(2, '0');
+    const formatted = `${yyyy}-${mm}-${dd}`;
     const [selectedDate, setSelectedDate] = useState<string>(formatted)
     const [aiReport, setAiReport] = useState("読み込み中...")
     const handleToggle = (currency: string) => {
