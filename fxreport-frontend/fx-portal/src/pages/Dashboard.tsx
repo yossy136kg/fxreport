@@ -2,19 +2,21 @@ import { useEffect, useState } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import RateCard from '../components/RateCard'
 import FilterPanel from '../components/FilterPanel'
-import { mockRates } from '../mock/mockRates'
+import DateSelector from '../components/DateSelector'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faNoteSticky } from '@fortawesome/free-solid-svg-icons'
 import type { RateData } from '../model/RateData'
 import '../components/RateCard.css'
 
 export default function Dashboard() {
-    const currencies = mockRates.map(r => r.currency)
-    const [selectedCurrencies, setSelectedCurrencies] = useState<string[]>(currencies)
-    const [selectedDate, setSelectedDate] = useState<string>(new Date().toISOString().slice(0, 10))
-    const [aiReport, setAiReport] = useState("読み込み中...")
     const [rates, setRates] = useState<RateData[]>([])
-
+    const currencies = Array.from(new Set(rates.map(r => r.currency)))
+    const [selectedCurrencies, setSelectedCurrencies] = useState<string[]>(currencies)
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    const formatted = yesterday.toISOString().slice(0, 10);
+    const [selectedDate, setSelectedDate] = useState<string>(formatted)
+    const [aiReport, setAiReport] = useState("読み込み中...")
     const handleToggle = (currency: string) => {
         setSelectedCurrencies(prev =>
             prev.includes(currency)
@@ -26,6 +28,11 @@ export default function Dashboard() {
     const visibleRates = rates.filter(r =>
         selectedCurrencies.includes(r.currency)
     )
+
+    useEffect(() => {
+        const uniqueCurrencies = Array.from(new Set(rates.map(r => r.currency)))
+        setSelectedCurrencies(uniqueCurrencies)
+    }, [rates])
 
     useEffect(() => {
         const fetchAiReport = async () => {
@@ -65,14 +72,10 @@ export default function Dashboard() {
             <h1 className="mb-4">為替AI日次レポート</h1>
 
             {/* 日時選択 */}
-            <Form.Group className="mb-3" controlId="dateSelect">
-                <Form.Label>日付を選択</Form.Label>
-                <Form.Control
-                    type="date"
-                    value={selectedDate}
-                    onChange={e => setSelectedDate(e.target.value)}
-                />
-            </Form.Group>
+            <DateSelector
+                selectedDate={selectedDate}
+                onChange={(newDate) => setSelectedDate(newDate)}
+            />
 
             {/* AI日次レポート */}
             <div className="ai-comment mt-2 mb-2">
