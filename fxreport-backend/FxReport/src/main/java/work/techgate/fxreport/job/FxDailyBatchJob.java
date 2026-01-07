@@ -30,7 +30,7 @@ public class FxDailyBatchJob {
 	/**
 	 * 毎日 09:10 に実行（日本時間）
 	 */
-	@Scheduled(cron = "0 10 9 * * ?", zone = "Asia/Tokyo")
+	@Scheduled(cron = "0 58 8 * * ?", zone = "Asia/Tokyo")
 	public void executeDaily() {
 
 		LocalDate targetDate = LocalDate.now();
@@ -38,15 +38,17 @@ public class FxDailyBatchJob {
 		log.info("FX Daily Batch start: {}", targetDate);
 
 		try {
+			LocalDate rateDate = targetDate;
 			for (String base : baseCurrencies) {
 				FxRateRaw raw = frankfurterApiService.fetchByDate(base, targetDate);
 				fxRateExpandService.expand(raw);
-				fxRateMetricsService.calculateAll(base, targetDate);
+				rateDate = raw.getRateDate();
+				fxRateMetricsService.calculateAll(base, rateDate);
 			}
 
 			// AI
-			fxUsdJpyAiCommentService.generate(targetDate);
-			fxAiDailyReportService.generate(targetDate);
+			fxUsdJpyAiCommentService.generate(rateDate);
+			fxAiDailyReportService.generate(rateDate);
 			log.info("FX Daily Batch finished successfully: {}", targetDate);
 
 		} catch (Exception e) {

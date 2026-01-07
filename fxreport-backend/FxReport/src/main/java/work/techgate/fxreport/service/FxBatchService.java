@@ -21,14 +21,16 @@ public class FxBatchService {
 	private final List<String> baseCurrencies = List.of("USD", "EUR", "GBP", "AUD", "CAD", "CHF", "NZD");
 
 	public void run(LocalDate date) throws IOException {
+		LocalDate rateDate = date;
 		for (String base : baseCurrencies) {
 			FxRateRaw raw = frankfurterApiService.fetchByDate(base, date);
 			fxRateExpandService.expand(raw);
-			fxRateMetricsService.calculateAll(base, date);
+			rateDate = raw.getRateDate();
+			fxRateMetricsService.calculateAll(base, rateDate);
 		}
 
 		// AI
-		fxUsdJpyAiCommentService.generate(date);
-		fxAiDailyReportService.generate(date);
+		fxUsdJpyAiCommentService.generate(rateDate);
+		fxAiDailyReportService.generate(rateDate);
 	}
 }
