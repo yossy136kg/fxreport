@@ -5,7 +5,7 @@ export const TechStackSection = () => {
     return (
         <>
             <h6
-                className="mt-0 mb-3 d-flex align-items-center"
+                className="mt-2 mb-3 d-flex align-items-center"
                 style={{ cursor: "pointer" }}
                 onClick={() => setOpen(!open)}
             >

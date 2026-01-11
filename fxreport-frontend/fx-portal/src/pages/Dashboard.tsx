@@ -79,10 +79,10 @@ export default function Dashboard() {
             <p className="mb-4">
                 為替データを可視化・分析するためのフルスタック Web アプリケーションです。<br />
                 バックエンドは <strong>Spring Boot（Java 21）</strong>、
-                フロントエンドは <strong>React（Vite）</strong> で構成されています。
+                フロントエンドは <strong>React</strong> で構成されています。
+                <TechStackSection />
             </p>
-            <TechStackSection />
-            
+
             {/* 日時選択 */}
             <DateSelector
                 selectedDate={selectedDate}
