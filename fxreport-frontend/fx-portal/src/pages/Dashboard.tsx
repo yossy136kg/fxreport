@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Container, Row, Col, Form } from 'react-bootstrap'
+import { Container, Row, Col } from 'react-bootstrap'
 import RateCard from '../components/RateCard'
 import FilterPanel from '../components/FilterPanel'
 import DateSelector from '../components/DateSelector'

@@ -30,7 +30,7 @@ public class FxDailyBatchJob {
 	/**
 	 * 毎日 09:10 に実行（日本時間）
 	 */
-	@Scheduled(cron = "0 0 1 * * ?", zone = "Asia/Tokyo")
+	@Scheduled(cron = "0 0 8 * * ?", zone = "Asia/Tokyo")
 	public void executeDaily() {
 
 		LocalDate targetDate = LocalDate.now();
