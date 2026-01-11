@@ -40,7 +40,7 @@ export default function Dashboard() {
     useEffect(() => {
         const fetchAiReport = async () => {
             try {
-                const res = await fetch(`http://localhost:8080/api/ai/report?date=${selectedDate}`);
+                const res = await fetch(`/api/ai/report?date=${selectedDate}`);
 
                 if (res.ok) {
                     const text = await res.text();
@@ -59,7 +59,7 @@ export default function Dashboard() {
     useEffect(() => {
         const loadSummary = async () => {
             try {
-                const res = await fetch(`http://localhost:8080/api/fx/summary?date=${selectedDate}`);
+                const res = await fetch(`/api/fx/summary?date=${selectedDate}`);
                 const data = res.ok ? await res.json() : [];
                 setRates(data);
             } catch {

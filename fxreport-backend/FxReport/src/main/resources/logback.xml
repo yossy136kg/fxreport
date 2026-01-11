@@ -1,7 +1,7 @@
 <configuration>
 
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
-    <property name="LOG_PATTERN" value="%d{yyyy/MM/dd HH:mm:ss} [%5p] %m%n"/>
+    <property name="LOG_PATTERN" value="%d{yyyy/MM/dd HH:mm:ss} [%5p] [%X{traceId}] [%thread] %m%n"/>
     <property name="APP_LOG_ROOT" value="logs"/>
     <property name="LOGS" value="logs"/>
     <timestamp key="timestamp" datePattern="yyyyMM"/>
@@ -28,9 +28,9 @@
         </rollingPolicy>
     </appender>
 
-	<logger name="org.hibernate.SQL" level="DEBUG" />
-    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE" />
-	<logger name="org.hibernate.type.EnumType" level="TRACE" />
+	<logger name="org.hibernate.SQL" level="INFO" />
+    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="INFO" />
+	<logger name="org.hibernate.type.EnumType" level="INFO" />
     <root level="INFO">
         <appender-ref ref="console"/>
         <appender-ref ref="stdout"/>

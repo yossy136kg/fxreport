@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import work.techgate.fxreport.model.FxAiDailyReport;
-import work.techgate.fxreport.repository.FxAiCommentRepository;
 import work.techgate.fxreport.repository.FxAiDailyReportRepository;
 
 @CrossOrigin(origins = "http://localhost:5173")
@@ -22,8 +21,6 @@ import work.techgate.fxreport.repository.FxAiDailyReportRepository;
 public class AiReportController {
 
 	private final FxAiDailyReportRepository fxAiDailyReportRepository;
-
-	private final FxAiCommentRepository aiCommentRepository;
 
 	@GetMapping("/report")
 	public ResponseEntity<String> getAiReport(
