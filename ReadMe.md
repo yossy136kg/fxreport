@@ -88,7 +88,7 @@ npm run dev
 
 ---
 
-## 🔗 フロント ↔ バックエンド連携
+## フロント ↔ バックエンド連携
 
 * フロント（5173） → バックエンド（8080）
 * REST API で通信
@@ -96,7 +96,7 @@ npm run dev
 
 ---
 
-## ⚙ 設定情報（Gemini API）
+## 設定情報（Gemini API）
 * 環境変数に設定
 
 ---
@@ -181,4 +181,4 @@ AI生成
 
 ## デモサイト
 
-![デモサイト](https://dev.techgate.work/)
+[デモサイト](https://dev.techgate.work/)
