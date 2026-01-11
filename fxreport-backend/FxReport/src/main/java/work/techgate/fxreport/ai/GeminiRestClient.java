@@ -36,7 +36,6 @@ public class GeminiRestClient implements AiClient {
 		// https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key=...
 		String url = baseUrl + "/models/" + model + ":generateContent?key=" + apiKey;
 
-		log.info("URL:" + url);
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.APPLICATION_JSON);
 
