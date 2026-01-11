@@ -1,5 +1,5 @@
 
-# 📈 為替AIポータル（fxreport）
+# 為替AIポータル（fxreport）
 
 為替データを可視化・分析するための **フルスタックWebアプリケーション**です。
 バックエンドは Spring Boot（Java 21）、フロントエンドは React（Vite）で構成されています。
@@ -14,7 +14,7 @@ fxreport（Gitリポジトリルート）
 
 ---
 
-## 🛠 技術的要素（Tech Stack）
+## 技術的要素（Tech Stack）
 
 ### バックエンド
 
@@ -43,7 +43,7 @@ fxreport（Gitリポジトリルート）
 
 ---
 
-## 📦 ディレクトリ構成
+## ディレクトリ構成
 
 ```
 fxreport
@@ -65,9 +65,9 @@ fxreport
 
 ---
 
-## 🚀 起動方法（ローカル開発）
+## 起動方法（ローカル開発）
 
-### 1️⃣ バックエンド（Spring Boot / Java 21）
+### バックエンド（Spring Boot / Java 21）
 
 ```bash
 cd fxreport-backend/FxReport
@@ -75,7 +75,7 @@ cd fxreport-backend/FxReport
 ```
 ---
 
-### 2️⃣ フロントエンド（React + Vite）
+### フロントエンド（React + Vite）
 
 ```bash
 cd fxreport-frontend/fx-portal
@@ -84,7 +84,7 @@ npm run dev
 ```
 
 * 起動URL：
-  👉 **[http://localhost:5173](http://localhost:5173)**
+  **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
@@ -97,15 +97,11 @@ npm run dev
 ---
 
 ## ⚙ 設定情報（Gemini API）
+* 環境変数に設定
 
-### application.properties（バックエンド）
-
-```properties
-gemini.api.key=xxxxxxxxxxxxxxxx
-```
 ---
 
-## 🧭 本プロジェクトの位置づけ
+## 本プロジェクトの位置づけ
 
 * 個人開発プロジェクト
 * 為替データ × AI（Gemini） × 可視化
@@ -114,14 +110,14 @@ gemini.api.key=xxxxxxxxxxxxxxxx
 
 ---
 
-## 🗄️ データベース構成
+## データベース構成
 
 * **データベース名**：`fxreport`
 * **スキーマ名**：`fxreport`
 
 ---
 
-## 📋 テーブル一覧
+## テーブル一覧
 
 | 論理テーブル名   | 物理テーブル名              | 説明                              |
 | --------- | -------------------- | ------------------------------- |
@@ -133,7 +129,7 @@ gemini.api.key=xxxxxxxxxxxxxxxx
 
 ---
 
-## 🧭 テーブル役割の整理（補足）
+## テーブル役割の整理（補足）
 
 * **`fx_rate_raw`**
 
@@ -163,7 +159,7 @@ gemini.api.key=xxxxxxxxxxxxxxxx
 
 ---
 
-## 🔗 想定データフロー
+## 想定データフロー
 
 ```
 外部API
@@ -179,6 +175,10 @@ AI生成
  └─ fx_ai_daily_report
 ```
 
-## 🗺 画面イメージ
+## 画面イメージ
 
 ![画面イメージ](docs/images/fxreport.png)
+
+## デモサイト
+
+![デモサイト](https://dev.techgate.work/)
