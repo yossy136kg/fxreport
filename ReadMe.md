@@ -178,7 +178,4 @@ AI生成
 ## 画面イメージ
 
 ![画面イメージ](docs/images/fxreport.png)
-
-## デモサイト
-
 [デモサイト](https://dev.techgate.work/)
