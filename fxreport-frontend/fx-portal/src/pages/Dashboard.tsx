@@ -3,12 +3,14 @@ import { Container, Row, Col } from 'react-bootstrap'
 import RateCard from '../components/RateCard'
 import FilterPanel from '../components/FilterPanel'
 import DateSelector from '../components/DateSelector'
+import { TechStackSection } from "../components/TechStackSection";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faNoteSticky } from '@fortawesome/free-solid-svg-icons'
 import type { RateData } from '../model/RateData'
 import '../components/RateCard.css'
 
 export default function Dashboard() {
+    const [open, setOpen] = useState(false);
     const [rates, setRates] = useState<RateData[]>([])
     const currencies = Array.from(new Set(rates.map(r => r.currency)))
     const [selectedCurrencies, setSelectedCurrencies] = useState<string[]>(currencies)
@@ -74,6 +76,13 @@ export default function Dashboard() {
             {/* 画面タイトル */}
             <h1 className="mb-4">為替AI日次レポート</h1>
 
+            <p className="mb-4">
+                為替データを可視化・分析するためのフルスタック Web アプリケーションです。<br />
+                バックエンドは <strong>Spring Boot（Java 21）</strong>、
+                フロントエンドは <strong>React（Vite）</strong> で構成されています。
+            </p>
+            <TechStackSection />
+            
             {/* 日時選択 */}
             <DateSelector
                 selectedDate={selectedDate}
