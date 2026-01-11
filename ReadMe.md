@@ -180,6 +180,5 @@ AI生成
 ![画面イメージ](docs/images/fxreport.png)
 
 ## デモサイト
-<a href="https://dev.techgate.work/" target="_blank" rel="noopener noreferrer">
-  デモサイトはこちら
-</a>
+
+[デモサイト](https://dev.techgate.work/)
