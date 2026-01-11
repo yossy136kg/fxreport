@@ -1,0 +1,38 @@
+/* 共通 */
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
+/* PC */
+@media (min-width: 768px) {
+  .date-selector {
+    width: 30%;
+  }
+}
+
+/* 日付入力 */
+.date-input {
+  flex: 1;
+  min-width: 140px;      /* ← これがないとスマホで死ぬ */
+  padding: 6px 8px;
+}
+
+/* ボタン */
+.date-btn {
+  min-width: 44px;       /* ← スマホのタップ最低サイズ */
+  padding: 6px 8px;
+}
+
+/* スマホ */
+@media (max-width: 767px) {
+  .date-selector {
+    flex-wrap: wrap;     /* ← 潰さず逃がす */
+  }
+
+  .date-input {
+    flex: 1 1 100%;
+  }
+}

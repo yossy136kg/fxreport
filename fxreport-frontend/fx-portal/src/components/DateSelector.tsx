@@ -1,4 +1,5 @@
-import { Form, Button, InputGroup } from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
+import './DateSelector.css'
 
 export default function DateSelector({
     selectedDate,
@@ -21,21 +22,30 @@ export default function DateSelector({
 
     return (
         <Form.Group controlId="dateSelect" className="mb-3">
-            <div style={{ maxWidth: '30%' }}>
-                <InputGroup>
-                    <Button variant="outline-secondary" onClick={handlePrev}>
-                        ◀
-                    </Button>
-                    <Form.Control
-                        type="date"
-                        value={selectedDate}
-                        onChange={(e) => onChange(e.target.value)}
-                    />
-                    <Button variant="outline-secondary" onClick={handleNext}>
-                        ▶
-                    </Button>
-                </InputGroup>
+            <div className="date-selector">
+                <Button
+                    variant="outline-secondary"
+                    onClick={handlePrev}
+                    className="date-btn"
+                >
+                    ◀
+                </Button>
+
+                <Form.Control
+                    type="date"
+                    value={selectedDate}
+                    onChange={(e) => onChange(e.target.value)}
+                    className="date-input"
+                />
+
+                <Button
+                    variant="outline-secondary"
+                    onClick={handleNext}
+                    className="date-btn"
+                >
+                    ▶
+                </Button>
             </div>
-        </Form.Group >
+        </Form.Group>
     )
 }
