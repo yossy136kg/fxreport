@@ -181,4 +181,4 @@ AI生成
 
 ## デモサイト
 
-[デモサイト](https://dev.techgate.work/){:target="_blank"}
+[デモサイト](https://dev.techgate.work/)
