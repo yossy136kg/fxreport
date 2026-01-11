@@ -9,7 +9,7 @@ export const TechStackSection = () => {
                 style={{ cursor: "pointer" }}
                 onClick={() => setOpen(!open)}
             >
-                技術スタック（Tech Stack）
+                ・技術スタック（Tech Stack）
                 <span className="ms-2">
                     {open ? "▲" : "▼"}
                 </span>
